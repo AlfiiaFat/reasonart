@@ -633,6 +633,37 @@
     .painting-card:hover .gallery-main,
     .painting-card:hover .gallery-thumbs img { transform: none; }
     .painting-card:hover .gallery-thumbs img:hover { transform: translateY(-2px); }
+
+    /* ── Карточка канала (Летопись художника) ───────────────── */
+    .channel-card {
+      display: flex; gap: 18px; align-items: flex-start;
+      text-align: left;
+      background: rgba(246,127,47,.08);
+      border: 1px solid rgba(246,127,47,.3);
+      border-radius: 14px;
+      padding: 24px 26px;
+      max-width: 560px; width: 100%;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .channel-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(246,127,47,.22);
+    }
+    .channel-icon {
+      flex-shrink: 0;
+      width: 46px; height: 46px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(246,127,47,.14);
+      border: 1px solid rgba(246,127,47,.25);
+      border-radius: 12px;
+    }
+    .channel-text { display: flex; flex-direction: column; gap: 7px; }
+    .channel-title { font-weight: 700; font-size: 1.1rem; color: var(--text); }
+    .channel-title span { color: var(--muted); font-weight: 500; font-size: .82rem; }
+    .channel-desc { color: var(--muted); font-size: .95rem; line-height: 1.6; }
+    .channel-cta { color: var(--accent); font-size: .9rem; font-weight: 600; margin-top: 2px; }
+    .channel-cta::after { content: ' →'; }
   </style>
 </head>
 <body>
@@ -938,11 +969,18 @@
 
     <div class="contacts-grid">
 
-      <a href="https://t.me/thematrixcod" target="_blank" class="contact-btn primary-contact">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F67F2F">
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
-        </svg>
-        Летопись художника
+      <!-- Канал «Летопись художника» — с описанием -->
+      <a href="https://t.me/thematrixcod" target="_blank" class="channel-card">
+        <span class="channel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#F67F2F">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
+          </svg>
+        </span>
+        <span class="channel-text">
+          <span class="channel-title">Летопись художника <span>· Telegram-канал</span></span>
+          <span class="channel-desc">Здесь я делюсь не только процессом создания картин, но и тем, что проживаю глубже — внутренними процессами и осознаниями, к которым прихожу сама. Живо и без фильтров.</span>
+          <span class="channel-cta">Подписаться, если откликается</span>
+        </span>
       </a>
 
       <a href="https://t.me/gedonistka80lvl" target="_blank" class="contact-btn">
@@ -950,13 +988,6 @@
           <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
         </svg>
         Написать в Telegram
-      </a>
-
-      <a href="https://t.me/mypeacefulfeelings" target="_blank" class="contact-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F67F2F">
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
-        </svg>
-        Канал «Мiрный Мир»
       </a>
 
     </div>
