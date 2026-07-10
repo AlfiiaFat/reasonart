@@ -602,6 +602,33 @@
       .hero-btns .btn { width: 100%; justify-content: center; }
       .about-stats { grid-template-columns: 1fr 1fr; }
     }
+
+    /* ── Галерея в карточке (Феникс) ────────────────────────── */
+    .painting-card-img.gallery {
+      display: flex; flex-direction: column; gap: 0;
+      min-height: 320px;
+    }
+    .gallery-main {
+      width: 100%; flex: 1; min-height: 260px;
+      object-fit: cover;
+    }
+    .gallery-thumbs {
+      display: flex; gap: 6px; padding: 8px;
+      background: var(--bg-card2);
+      border-top: 1px solid var(--border);
+    }
+    .gallery-thumbs img {
+      width: 60px; height: 60px; object-fit: cover;
+      border-radius: 6px; cursor: pointer;
+      opacity: .5; border: 1px solid var(--border);
+      transition: opacity .2s, border-color .2s, transform .2s;
+    }
+    .gallery-thumbs img.active { opacity: 1; border-color: var(--accent); }
+    .gallery-thumbs img:hover { opacity: 1; border-color: var(--accent); transform: translateY(-2px); }
+    /* отключаем общий hover-зум карточки для галереи */
+    .painting-card:hover .gallery-main,
+    .painting-card:hover .gallery-thumbs img { transform: none; }
+    .painting-card:hover .gallery-thumbs img:hover { transform: translateY(-2px); }
   </style>
 </head>
 <body>
@@ -679,8 +706,13 @@
 
     <!-- Феникс -->
     <div class="painting-card">
-      <div class="painting-card-img">
-        <img src="images/feniks.jpg" alt="Феникс" />
+      <div class="painting-card-img gallery">
+        <img class="gallery-main" src="images/feniks.jpg" alt="Феникс" />
+        <div class="gallery-thumbs">
+          <img src="images/feniks.jpg" alt="Феникс — крупный план" class="active" onclick="swapFeniks(this)" />
+          <img src="images/feniks-full.jpg" alt="Феникс — весь холст, сакральная геометрия" onclick="swapFeniks(this)" />
+          <img src="images/feniks-angle.jpg" alt="Феникс — фактура и рельеф" onclick="swapFeniks(this)" />
+        </div>
       </div>
       <div class="painting-card-info">
         <div class="painting-status">В продаже</div>
@@ -738,10 +770,10 @@
           Шри-янтра — сакральный символ вселенской гармонии.
           Живёт в пространстве как медитативный объект.
         </p>
-        <div class="painting-meta">
-          <span class="price-ask">Размер и цена — по запросу</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Написать о покупке</a>
+        <p class="painting-desc" style="color:var(--accent);">
+          <strong>Доступна под заказ</strong> — создам похожую работу под ваш запрос (размер, цвет и настроение обсудим).
+        </p>
+        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Заказать похожую</a>
       </div>
     </div>
 
@@ -760,10 +792,10 @@
           Тёмный фон усиливает свечение золотой мандалы — контраст проявленного
           и непроявленного.
         </p>
-        <div class="painting-meta">
-          <span class="price-ask">Размер и цена — по запросу</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Написать о покупке</a>
+        <p class="painting-desc" style="color:var(--accent);">
+          <strong>Доступна под заказ</strong> — создам похожую работу под ваш запрос (размер, цвет и настроение обсудим).
+        </p>
+        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Заказать похожую</a>
       </div>
     </div>
 
@@ -931,6 +963,15 @@
 <footer>
   <p>© 2026 <span>Reason Art</span> · Альфия · Уфа · искусство, которое откликается</p>
 </footer>
+
+<script>
+  function swapFeniks(t){
+    var wrap = t.closest('.gallery');
+    wrap.querySelector('.gallery-main').src = t.src;
+    wrap.querySelectorAll('.gallery-thumbs img').forEach(function(i){ i.classList.remove('active'); });
+    t.classList.add('active');
+  }
+</script>
 
 </body>
 </html>
