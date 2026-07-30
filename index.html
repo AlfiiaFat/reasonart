@@ -610,6 +610,11 @@
       .hero-btns { flex-direction: column; }
       .hero-btns .btn { width: 100%; justify-content: center; }
       .about-stats { grid-template-columns: 1fr 1fr; }
+      /* на телефоне закрепляем переключатель языка в углу — виден всегда */
+      .lang-switch {
+        position: fixed; top: 13px; right: 5%; z-index: 200;
+        background: rgba(10,10,16,.85); backdrop-filter: blur(6px);
+      }
     }
 
     /* ── Галерея в карточке (Феникс) ────────────────────────── */
