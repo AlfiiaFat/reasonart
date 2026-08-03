@@ -684,6 +684,11 @@
       transition: border-color .2s, background .2s;
     }
     .lang-switch:hover { border-color: var(--accent); background: rgba(246,127,47,.12); }
+
+    /* ── Аудио-история работы (голос художника) ─────────────── */
+    .painting-audio { margin: 4px 0 8px; display: flex; flex-direction: column; gap: 8px; }
+    .painting-audio .audio-label { font-size: .9rem; font-weight: 600; color: var(--accent); }
+    .painting-audio audio { width: 100%; max-width: 340px; height: 40px; }
   </style>
 </head>
 <body>
@@ -799,6 +804,10 @@
           Картина о трансформации и силе возрождения. Смешанная техника, объёмная фактура.
           В работу вписана сакральная геометрия — Звезда Давида в левом нижнем углу.
         </p>
+        <div class="painting-audio">
+          <span class="audio-label">🔊 История работы — голосом художника</span>
+          <audio controls preload="none" src="audio/feniks.mp3"></audio>
+        </div>
         <div class="painting-meta">
           <span class="size">50 × 70 см</span>
           <span class="price">12 333 ₽</span>
@@ -823,6 +832,10 @@
           сколько кроны — столько и корня. Живёт на стене как напоминание,
           что сила растёт снизу, из корня.
         </p>
+        <div class="painting-audio">
+          <span class="audio-label">🔊 История работы — голосом художника</span>
+          <audio controls preload="none" src="audio/drevo.mp3"></audio>
+        </div>
         <div class="painting-meta">
           <span class="size">50 × 50 см</span>
           <span class="price">9 333 ₽</span>

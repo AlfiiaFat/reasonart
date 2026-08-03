@@ -684,6 +684,11 @@
       transition: border-color .2s, background .2s;
     }
     .lang-switch:hover { border-color: var(--accent); background: rgba(246,127,47,.12); }
+
+    /* ── Audio story (artist's voice) ───────────────────────── */
+    .painting-audio { margin: 4px 0 8px; display: flex; flex-direction: column; gap: 8px; }
+    .painting-audio .audio-label { font-size: .9rem; font-weight: 600; color: var(--accent); }
+    .painting-audio audio { width: 100%; max-width: 340px; height: 40px; }
   </style>
 </head>
 <body>
@@ -799,6 +804,10 @@
           A painting about transformation and the power of rebirth. Mixed media, textured relief.
           Sacred geometry is woven in — a Star of David in the lower-left corner.
         </p>
+        <div class="painting-audio">
+          <span class="audio-label">🔊 The story in the artist's voice (in Russian)</span>
+          <audio controls preload="none" src="../audio/feniks.mp3"></audio>
+        </div>
         <div class="painting-meta">
           <span class="size">50 × 70 cm</span>
           <span class="price">12 333 ₽</span>
@@ -823,6 +832,10 @@
           as much crown, as much root. It lives on the wall as a reminder
           that strength grows from below, from the root.
         </p>
+        <div class="painting-audio">
+          <span class="audio-label">🔊 The story in the artist's voice (in Russian)</span>
+          <audio controls preload="none" src="../audio/drevo.mp3"></audio>
+        </div>
         <div class="painting-meta">
           <span class="size">50 × 50 cm</span>
           <span class="price">9 333 ₽</span>
