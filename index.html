@@ -244,6 +244,42 @@
       line-height: 1; margin-bottom: 10px; opacity: .7;
     }
 
+    /* ── Видение ────────────────────────────────────────────── */
+    .vision-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 22px; max-width: 1000px; margin-bottom: 36px;
+    }
+    .vision-card {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      position: relative;
+      transition: border-color .3s, transform .3s;
+    }
+    .vision-card:hover { border-color: rgba(246,127,47,.32); transform: translateY(-3px); }
+    .vision-step {
+      display: inline-block;
+      font-size: .72rem; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent);
+      background: rgba(246,127,47,.1);
+      border: 1px solid rgba(246,127,47,.25);
+      padding: 4px 12px; border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    .vision-card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+    .vision-card p { color: var(--muted); font-size: .96rem; line-height: 1.7; }
+    .vision-note {
+      max-width: 1000px;
+      border-left: 2px solid var(--accent);
+      padding: 4px 0 4px 24px;
+    }
+    .vision-note p {
+      color: var(--light); font-size: 1.05rem; line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .vision-note strong { color: var(--accent); font-weight: 600; }
+
     /* ── Paintings ──────────────────────────────────────────── */
     #paintings { background: var(--bg-card); }
     .paintings-list {
@@ -649,6 +685,7 @@
       .hero-geo { left: 50%; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .authors-grid { grid-template-columns: 1fr; max-width: 520px; }
+      .vision-grid { grid-template-columns: 1fr; max-width: 520px; }
       .projects-grid { grid-template-columns: 1fr; max-width: 480px; }
       .painting-card { grid-template-columns: 1fr; }
       .painting-card-img { min-height: 260px; }
@@ -753,6 +790,7 @@
     <a href="#manifest">О проекте</a>
     <a href="#paintings">Работы</a>
     <a href="#authors">Авторы</a>
+    <a href="#vision">Видение</a>
     <a href="#artists">Художникам</a>
     <a href="#contacts">Контакты</a>
   </div>
@@ -823,7 +861,7 @@
       Такие работы редко попадают в галереи и теряются в общих маркетплейсах. Здесь они собраны в одном месте — и находят своих людей.
     </p>
     <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
-      Проект молодой: пока мы только собираем это пространство, и сейчас в нём один автор. <a href="#artists" style="color: var(--accent); font-weight: 600;">Присоединиться можно уже сейчас</a> — тем, кто делает искусство в том же духе.
+      Проект молодой: пока мы только собираем это пространство, и сейчас в нём один автор. <a href="#vision" style="color: var(--accent); font-weight: 600;">Присоединиться можно уже сейчас</a> — тем, кто делает искусство в том же духе.
     </p>
   </div>
 </section>
@@ -1084,6 +1122,46 @@
         <a href="#artists" class="author-link">Как присоединиться →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="line"></div>
+
+<!-- ── Видение ─────────────────────────────────────────────────────── -->
+<section id="vision">
+  <div class="section-label">Видение</div>
+  <h2 class="section-title">Куда это растёт</h2>
+  <p class="section-desc">
+    Reason Art задуман не как витрина с работами, а как экосистема вокруг искусства,
+    в котором есть смысл — для тех, кто его создаёт, и для тех, кто ищет его в свой дом.
+  </p>
+
+  <div class="vision-grid">
+    <div class="vision-card">
+      <div class="vision-step">Сейчас</div>
+      <h3>Работы и авторы</h3>
+      <p>Каталог работ и страница у каждого автора: история, голос, контакты. Покупатель пишет художнику напрямую — без посредников и комиссий.</p>
+    </div>
+    <div class="vision-card">
+      <div class="vision-step">Следующий шаг</div>
+      <h3>Подбор под пространство</h3>
+      <p>Больше авторов — и возможность увидеть, как работа будет жить именно у вас на стене, ещё до покупки.</p>
+    </div>
+    <div class="vision-card">
+      <div class="vision-step">Горизонт</div>
+      <h3>Экосистема</h3>
+      <p>Художники, покупатели и дизайнеры интерьера — и общий язык между ними. Совместные проекты, обмен аудиторией, живые события.</p>
+    </div>
+  </div>
+
+  <div class="vision-note">
+    <p>
+      Ничего из этого ещё не построено до конца. Мы в той точке, где <strong>то, каким это станет,
+      определяют те, кто заходит сейчас</strong> — своими работами, вопросами и идеями.
+    </p>
+    <p style="margin-bottom:0;">
+      Если откликается не только само искусство, но и желание строить что-то большее — нам по пути.
+    </p>
   </div>
 </section>
 
