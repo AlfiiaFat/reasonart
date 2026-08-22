@@ -821,8 +821,12 @@
 
     <!-- Древо Жизни -->
     <div class="painting-card">
-      <div class="painting-card-img">
-        <img src="images/drevo.jpg" alt="Древо Жизни" />
+      <div class="painting-card-img gallery">
+        <img class="gallery-main" src="images/drevo.jpg" alt="Древо Жизни" />
+        <div class="gallery-thumbs">
+          <img src="images/drevo.jpg" alt="Древо Жизни — картина" class="active" onclick="swapFeniks(this)" />
+          <img src="images/drevo-interior.jpg" alt="Древо Жизни — пример в интерьере" onclick="swapFeniks(this)" />
+        </div>
       </div>
       <div class="painting-card-info">
         <div class="painting-status">В продаже</div>
