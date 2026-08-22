@@ -3,32 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reason Art — искусство, которое откликается</title>
-  <meta name="description" content="Reason Art — место для живого, осмысленного, сакрального искусства. Авторская живопись в единственном экземпляре: сакральная геометрия, Феникс, Шри-янтра, Древо Жизни. Художникам — открыт приём работ." />
-  <link rel="canonical" href="https://reasonart.com/" />
-  <link rel="alternate" hreflang="ru" href="https://reasonart.com/" />
-  <link rel="alternate" hreflang="en" href="https://reasonart.com/en/" />
-  <link rel="alternate" hreflang="x-default" href="https://reasonart.com/" />
-  <meta name="yandex-verification" content="6e789c186f7e89f4" />
-  <meta name="p:domain_verify" content="06f6e637fa23dc6f806bc3bc66c766ba"/>
-
-  <!-- Иконка вкладки (сакральная геометрия) -->
+  <title>Альфия — художник Reason Art</title>
+  <meta name="description" content="Альфия — художник из Уфы, автор Reason Art. Живопись на основе сакральной геометрии: Феникс, Древо Жизни, Шри-янтра. Также практик акутоники." />
+  <link rel="canonical" href="https://reasonart.com/alfia/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20fill='%230a0a10'/%3E%3Ccircle%20cx='16'%20cy='16'%20r='12'%20fill='none'%20stroke='%23F67F2F'%20stroke-width='1.4'/%3E%3Cpolygon%20points='16,5%2026,23%206,23'%20fill='none'%20stroke='%23F67F2F'%20stroke-width='1.4'/%3E%3Cpolygon%20points='16,27%206,9%2026,9'%20fill='none'%20stroke='%23F67F2F'%20stroke-width='1.4'/%3E%3C/svg%3E" />
-
-  <!-- Превью при отправке ссылки (OpenGraph). Абсолютные URL — чтобы превью работало стабильно.
-       ?v=2 — метка версии, заставляет мессенджеры перезагрузить новое фото.
-       После подключения домена reasonart.com — заменить адрес на него. -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://reasonart.com/" />
-  <meta property="og:title" content="Reason Art — искусство, которое откликается" />
-  <meta property="og:description" content="Место для живого, осмысленного, сакрального искусства. Авторская живопись в единственном экземпляре." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://reasonart.com/alfia/" />
+  <meta property="og:title" content="Альфия — художник Reason Art" />
+  <meta property="og:description" content="Живопись на основе сакральной геометрии. Пишу по ощущению, а не по плану." />
   <meta property="og:image" content="https://reasonart.com/images/feniks.jpg?v=3" />
-  <meta property="og:image:alt" content="Феникс — картина Альфии, Reason Art" />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0a0a10" />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
-  <style>
+<style>
     /* ── Reset & Base ───────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -742,406 +728,216 @@
     .painting-audio { margin: 4px 0 8px; display: flex; flex-direction: column; gap: 8px; }
     .painting-audio .audio-label { font-size: .9rem; font-weight: 600; color: var(--accent); }
     .painting-audio audio { width: 100%; max-width: 340px; height: 40px; }
+  </style>  <style>
+    .artist-hero {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 48px; align-items: center;
+      max-width: 980px; margin: 0 auto;
+      padding-top: 40px;
+    }
+    .artist-photo {
+      width: 100%; aspect-ratio: 3/4;
+      border-radius: 20px; overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .artist-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .works-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 16px; max-width: 900px;
+    }
+    .works-strip a {
+      aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform .3s, border-color .3s;
+    }
+    .works-strip a:hover { transform: translateY(-4px); border-color: rgba(246,127,47,.5); }
+    .works-strip img { width: 100%; height: 100%; object-fit: cover; }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: var(--muted); font-size: .9rem; font-weight: 500;
+      margin-bottom: 28px; transition: color .2s;
+    }
+    .back-link:hover { color: var(--accent); }
+    @media (max-width: 900px) {
+      .artist-hero { grid-template-columns: 1fr; gap: 32px; }
+      .artist-photo { max-width: 260px; }
+      .works-strip { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .works-strip { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
 
-<!-- ── Nav ─────────────────────────────────────────────────────────── -->
+<!-- Nav -->
 <nav>
-  <div class="nav-logo">Reason<span>Art</span></div>
+  <a href="/" class="nav-logo">Reason<span>Art</span></a>
   <div class="nav-links">
-    <a href="#manifest">О проекте</a>
-    <a href="#paintings">Работы</a>
-    <a href="#authors">Авторы</a>
-    <a href="#artists">Художникам</a>
+    <a href="/#manifest">О проекте</a>
+    <a href="/#paintings">Работы</a>
+    <a href="/#authors">Авторы</a>
+    <a href="/#artists">Художникам</a>
     <a href="#contacts">Контакты</a>
   </div>
-  <a href="/en/" class="lang-switch">EN</a>
+  <a href="/" class="lang-switch">← На главную</a>
 </nav>
 
-<!-- ── Hero ────────────────────────────────────────────────────────── -->
-<section id="hero">
-  <!-- янтра — центрирована в левой половине, не перекрывает фото -->
-  <div class="hero-geo" aria-hidden="true">
-    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#F67F2F" stroke-width="0.7">
-      <defs>
-        <filter id="yg">
-          <feGaussianBlur stdDeviation="2.5" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <!-- внешние круги — вращаются по часовой -->
-      <g class="yantra-outer" filter="url(#yg)">
-        <circle cx="200" cy="200" r="192"/>
-        <circle cx="200" cy="200" r="152"/>
-        <circle cx="200" cy="200" r="112"/>
-        <circle cx="200" cy="200" r="72"/>
-        <circle cx="200" cy="200" r="32"/>
-      </g>
-      <!-- треугольники — вращаются против часовой -->
-      <g class="yantra-inner">
-        <polygon points="200,28 374,292 26,292"/>
-        <polygon points="200,372 26,108 374,108"/>
-        <polygon points="200,62 342,272 58,272"/>
-        <polygon points="200,338 58,128 342,128"/>
-      </g>
-    </svg>
+<!-- Художник -->
+<section style="padding-top: 140px;">
+  <div style="max-width: 980px; margin: 0 auto;">
+    <a href="/#authors" class="back-link">← Все авторы</a>
   </div>
-
-  <div class="hero-inner">
-    <div class="hero-tag">Искусство, которое откликается</div>
-    <h1 class="hero-name">Reason<span>Art</span></h1>
-    <p class="hero-subtitle">Живопись, в которой есть смысл</p>
-    <p class="hero-desc">
-      Не декор ради стен, а работы, что несут смысл, энергию и состояние —
-      и меняют пространство, в котором живут.
-    </p>
-    <div class="hero-btns">
-      <a href="#paintings" class="btn btn-primary">Смотреть работы</a>
-      <a href="#artists" class="btn btn-ghost">Художникам</a>
+  <div class="artist-hero">
+    <div class="artist-photo">
+      <img src="../images/alfia.jpg" alt="Альфия — художник Reason Art" />
+    </div>
+    <div>
+      <div class="section-label">Автор Reason Art</div>
+      <h1 class="section-title" style="font-size: clamp(2rem,5vw,3rem); margin-bottom: 12px;">Альфия</h1>
+      <p style="color: var(--light); font-size: 1.15rem; font-style: italic; margin-bottom: 22px;">
+        Живопись, сакральная геометрия · Уфа
+      </p>
+      <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
+        Работаю с тем, что не видно глазами. Пишу картины на основе сакральной
+        геометрии и провожу звуковые сессии с планетарными камертонами.
+      </p>
+      <div class="hero-btns" style="margin-top: 28px;">
+        <a href="/#paintings" class="btn btn-primary">Смотреть мои работы</a>
+        <a href="#contacts" class="btn btn-ghost">Написать</a>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="hero-works">
-    <a href="#paintings" class="hero-work"><img src="images/feniks.jpg" alt="Феникс — картина сакральной геометрии" /></a>
-    <a href="#paintings" class="hero-work"><img src="images/shri-yantra-dark.jpg" alt="Шри-янтра тёмная" /></a>
-    <a href="#paintings" class="hero-work"><img src="images/vesna.jpg" alt="Весна — абстрактная живопись" /></a>
+<div class="line"></div>
+
+<!-- О себе -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label">Обо мне</div>
+      <h2 class="section-title">Работаю с тем,<br/>что не видно глазами</h2>
+      <p>
+        Меня зовут Альфия. Я из Уфы — <strong>художник</strong>
+        и <strong>практик акутоники</strong>. Рисую картины на основе
+        сакральной геометрии и провожу звуковые сессии с планетарными
+        камертонами.
+      </p>
+      <p>
+        В живописи я не следую плану — работаю по ощущению.
+        Сакральная геометрия, феникс, шри-янтра — каждая форма
+        несёт определённую энергию и намерение.
+      </p>
+      <p>
+        Акутоника — это точечная работа со звуком: камертон на
+        акупунктурную точку создаёт вибрацию, которая идёт вглубь.
+        Это мягко и при этом ощутимо.
+      </p>
+      <div class="about-tags">
+        <span class="tag accent">Сакральная геометрия</span>
+        <span class="tag accent">Акутоника</span>
+        <span class="tag">Уфа / Москва</span>
+        <span class="tag">Индивидуальный подход</span>
+        <span class="tag">Живопись</span>
+      </div>
+    </div>
+
+    <div class="about-visual">
+      <div class="about-stats">
+        <div class="about-card">
+          <div class="about-card-num">3+</div>
+          <div class="about-card-label">года практики<br/>акутоники</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-num">∞</div>
+          <div class="about-card-label">каждая картина<br/>уникальна</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-num">♫</div>
+          <div class="about-card-label">звук как<br/>инструмент</div>
+        </div>
+        <div class="about-card">
+          <div class="about-card-num">✦</div>
+          <div class="about-card-label">сакральная<br/>геометрия</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <div class="line"></div>
 
-<!-- ── О Reason Art (манифест) ─────────────────────────────────────── -->
-<section id="manifest">
-  <div style="max-width: 780px; margin: 0 auto; text-align: center;">
-    <div class="section-label">О проекте</div>
-    <h2 class="section-title" style="margin-bottom: 24px;">Место для искусства со смыслом</h2>
-    <p style="color: var(--light); font-size: 1.15rem; line-height: 1.8; margin-bottom: 22px;">
-      Reason Art — дом для живого, осмысленного, сакрального искусства. Здесь работы, рождённые по ощущению, а не по плану: сакральная геометрия, символы, форма, за которой стоит состояние.
-    </p>
-    <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 18px;">
-      Такие работы редко попадают в галереи и теряются в общих маркетплейсах. Здесь они собраны в одном месте — и находят своих людей.
-    </p>
-    <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
-      Проект молодой: пока мы только собираем это пространство, и сейчас в нём один автор. <a href="#artists" style="color: var(--accent); font-weight: 600;">Присоединиться можно уже сейчас</a> — тем, кто делает искусство в том же духе.
-    </p>
-  </div>
-</section>
-
-<div class="line"></div>
-
-<!-- ── Paintings ───────────────────────────────────────────────────── -->
-<section id="paintings">
+<!-- Работы -->
+<section id="works" style="background: var(--bg-card);">
   <div class="section-label">Работы</div>
-  <h2 class="section-title">Картины</h2>
-  <p class="section-desc">
-    Каждая работа написана по ощущению и существует в единственном экземпляре.<br/>
-    Автор всех работ ниже — <a href="/alfia/" style="color: var(--accent); font-weight: 600;">Альфия</a>.
-  </p>
+  <h2 class="section-title">Мои картины</h2>
+  <p class="section-desc">Каждая написана по ощущению и существует в единственном экземпляре. Полные описания, цены и голосовые истории — в каталоге.</p>
 
-  <div class="paintings-list">
+  <div class="works-strip">
+    <a href="/#paintings"><img src="../images/feniks.jpg" alt="Феникс" loading="lazy" /></a>
+    <a href="/#paintings"><img src="../images/drevo.jpg" alt="Древо Жизни" loading="lazy" /></a>
+    <a href="/#paintings"><img src="../images/shtorm.jpg" alt="Шторм" loading="lazy" /></a>
+    <a href="/#paintings"><img src="../images/vesna.jpg" alt="Весна" loading="lazy" /></a>
+    <a href="/#paintings"><img src="../images/yantra-blank.jpg" alt="Шри-янтра — заготовка" loading="lazy" /></a>
+    <a href="/#paintings"><img src="../images/shri-yantra-light.jpg" alt="Шри-янтра светлая" loading="lazy" /></a>
+    <a href="/#paintings"><img src="../images/shri-yantra-dark.jpg" alt="Шри-янтра тёмная" loading="lazy" /></a>
+  </div>
 
-    <!-- Феникс -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/feniks.jpg" alt="Феникс" />
-        <div class="gallery-thumbs">
-          <img src="images/feniks.jpg" alt="Феникс — крупный план" class="active" onclick="swapFeniks(this)" />
-          <img src="images/feniks-full.jpg" alt="Феникс — весь холст, сакральная геометрия" onclick="swapFeniks(this)" />
-          <img src="images/feniks-angle.jpg" alt="Феникс — фактура и рельеф" onclick="swapFeniks(this)" />
-          <img src="images/feniks-head.jpg" alt="Феникс — голова, детали рельефа" onclick="swapFeniks(this)" />
-          <img src="images/feniks-interior1.jpg" alt="Феникс — пример в интерьере гостиной" onclick="swapFeniks(this)" />
-          <img src="images/feniks-interior2.jpg" alt="Феникс — пример на глубокой стене" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-status">В продаже</div>
-        <h3>Феникс</h3>
-        <p class="painting-mood">Возрождение, трансформация, сила</p>
-        <p class="painting-desc">
-          Феникс в полёте — тёплые розово-золотые крылья на холодном серо-синем фоне.
-          Картина о трансформации и силе возрождения. Смешанная техника, объёмная фактура.
-          В работу вписана сакральная геометрия — Звезда Давида в левом нижнем углу.
-        </p>
-        <div class="painting-audio">
-          <span class="audio-label">🔊 История работы — голосом художника</span>
-          <audio controls preload="none" src="audio/feniks.mp3"></audio>
-        </div>
-        <div class="painting-meta">
-          <span class="size">50 × 70 см</span>
-          <span class="price">12 333 ₽</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Написать о покупке</a>
-      </div>
-    </div>
-
-    <!-- Древо Жизни -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/drevo.jpg" alt="Древо Жизни" />
-        <div class="gallery-thumbs">
-          <img src="images/drevo.jpg" alt="Древо Жизни — картина" class="active" onclick="swapFeniks(this)" />
-          <img src="images/drevo-interior.jpg" alt="Древо Жизни — пример в интерьере" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-status">В продаже</div>
-        <h3>Древо Жизни</h3>
-        <p class="painting-mood">Корни рода, опора, рост из глубины</p>
-        <p class="painting-desc">
-          Золотое древо: крона тянется к свету, корни уходят глубоко в землю.
-          Рельефная работа с сусальным золотом на тёплом фоне.
-          Древо жизни — символ связи поколений и внутренней опоры:
-          сколько кроны — столько и корня. Живёт на стене как напоминание,
-          что сила растёт снизу, из корня.
-        </p>
-        <div class="painting-audio">
-          <span class="audio-label">🔊 История работы — голосом художника</span>
-          <audio controls preload="none" src="audio/drevo.mp3"></audio>
-        </div>
-        <div class="painting-meta">
-          <span class="size">50 × 50 см</span>
-          <span class="price">9 333 ₽</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Написать о покупке</a>
-      </div>
-    </div>
-
-    <!-- Шторм -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/shtorm.jpg" alt="Шторм" />
-        <div class="gallery-thumbs">
-          <img src="images/shtorm.jpg" alt="Шторм — общий вид" class="active" onclick="swapFeniks(this)" />
-          <img src="images/shtorm-detail1.jpg" alt="Шторм — деталь, нижняя часть" onclick="swapFeniks(this)" />
-          <img src="images/shtorm-interior1.jpg" alt="Шторм — пример в интерьере" onclick="swapFeniks(this)" />
-          <img src="images/shtorm-interior2.jpg" alt="Шторм — пример в современном лофте" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-status">В продаже</div>
-        <h3>Шторм</h3>
-        <p class="painting-mood">Напряжение, разрядка, нерв пространства</p>
-        <p class="painting-desc">
-          Синяя и лиловая гамма — состояние на грани напряжения. А через холст
-          проходит тонкая ярко-красная линия — как молния, что пронизывает
-          пространство, отпускает внутреннее электричество и даёт разрядку.
-          Экспрессивная живопись для тех, кто чувствует характер в пространстве.
-        </p>
-        <div class="painting-audio">
-          <span class="audio-label">🔊 История работы — голосом художника</span>
-          <audio controls preload="none" src="audio/shtorm.mp3"></audio>
-        </div>
-        <div class="painting-meta">
-          <span class="size">40 × 60 см</span>
-          <span class="price">6 333 ₽</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Написать о покупке</a>
-      </div>
-    </div>
-
-    <!-- Весна -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/vesna.jpg" alt="Весна" />
-        <div class="gallery-thumbs">
-          <img src="images/vesna.jpg" alt="Весна — общий вид" class="active" onclick="swapFeniks(this)" />
-          <img src="images/vesna-detail1.jpg" alt="Весна — деталь, зелёное и малиновое" onclick="swapFeniks(this)" />
-          <img src="images/vesna-detail2.jpg" alt="Весна — деталь, голубое и золото" onclick="swapFeniks(this)" />
-          <img src="images/vesna-detail3.jpg" alt="Весна — деталь, нижний угол" onclick="swapFeniks(this)" />
-          <img src="images/vesna-interior1.jpg" alt="Весна — пример в гостиной" onclick="swapFeniks(this)" />
-          <img src="images/vesna-interior2.jpg" alt="Весна — пример в светлом интерьере" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-status">В продаже</div>
-        <h3>Весна</h3>
-        <p class="painting-mood">Пробуждение, лёгкость, быстрая смена состояний</p>
-        <p class="painting-desc">
-          Сочный майский зелёный и яркий малиновый — весеннее пробуждение
-          природы. Первые проталины, набухающие почки, бурное цветение —
-          и вот уже ветер срывает и носит в воздухе лепестки яблони.
-          Смелая, солнечная, позитивная работа для тех, кто не боится ярких перемен.
-        </p>
-        <div class="painting-audio">
-          <span class="audio-label">🔊 История работы — голосом художника</span>
-          <audio controls preload="none" src="audio/vesna.mp3"></audio>
-        </div>
-        <div class="painting-meta">
-          <span class="size">60 × 80 см</span>
-          <span class="price">8 888 ₽</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Написать о покупке</a>
-      </div>
-    </div>
-
-    <!-- Шри-янтра — заготовка для творчества -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/yantra-blank.jpg" alt="Шри-янтра — заготовка для творчества" />
-        <div class="gallery-thumbs">
-          <img src="images/yantra-blank.jpg" alt="Шри-янтра — рельеф целиком" class="active" onclick="swapFeniks(this)" />
-          <img src="images/yantra-blank-detail.jpg" alt="Шри-янтра — фрагмент с сухоцветами" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-status">В продаже</div>
-        <h3>Шри-янтра — заготовка для творчества</h3>
-        <p class="painting-mood">Основа для вашей собственной работы</p>
-        <p class="painting-desc">
-          Белый рельеф Шри-янтры на холсте — чистая основа под самостоятельную
-          роспись. Для тех, кто хочет выразить свою задумку и своими руками
-          создать в интерьер картину с сакральной геометрией: раскрасить
-          акрилом, добавить золото, сделать работу своей.
-        </p>
-        <div class="painting-meta">
-          <span class="price">2 999 ₽</span>
-        </div>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Заказать заготовку</a>
-      </div>
-    </div>
-
-    <!-- Шри-янтра светлая -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/shri-yantra-light.jpg" alt="Шри-янтра светлая" />
-        <div class="gallery-thumbs">
-          <img src="images/shri-yantra-light.jpg" alt="Шри-янтра светлая — картина" class="active" onclick="swapFeniks(this)" />
-          <img src="images/yantra-light-interior.jpg" alt="Шри-янтра светлая — пример в интерьере" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-mood" style="color:var(--muted); font-style:normal; letter-spacing:.04em;">Из личной коллекции · не продаётся</div>
-        <h3>Шри-янтра светлая</h3>
-        <p class="painting-mood">Гармония, изобилие, женское начало</p>
-        <p class="painting-desc">
-          Рельефная работа в золоте и серебре на светлом кремовом фоне.
-          Ботанические детали в углах добавляют мягкость.
-          Шри-янтра — сакральный символ вселенской гармонии.
-          Живёт в пространстве как медитативный объект.
-        </p>
-        <p class="painting-desc" style="color:var(--accent);">
-          <strong>Доступна под заказ</strong> — создам похожую работу под ваш запрос (размер, цвет и настроение обсудим).
-        </p>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Заказать похожую</a>
-      </div>
-    </div>
-
-    <!-- Шри-янтра тёмная -->
-    <div class="painting-card">
-      <div class="painting-card-img gallery">
-        <img class="gallery-main" src="images/shri-yantra-dark.jpg" alt="Шри-янтра тёмная" />
-        <div class="gallery-thumbs">
-          <img src="images/shri-yantra-dark.jpg" alt="Шри-янтра тёмная — картина" class="active" onclick="swapFeniks(this)" />
-          <img src="images/yantra-dark-interior.jpg" alt="Шри-янтра тёмная — пример в интерьере" onclick="swapFeniks(this)" />
-        </div>
-      </div>
-      <div class="painting-card-info">
-        <div class="painting-mood" style="color:var(--muted); font-style:normal; letter-spacing:.04em;">Продана · оставлена как пример работы</div>
-        <h3>Шри-янтра тёмная</h3>
-        <p class="painting-mood">Глубина, мистика, свет из темноты</p>
-        <p class="painting-desc">
-          Золото на тёмном фиолетово-сером мраморном фоне.
-          Рельефная работа, которая живёт на стене как медитативный портал.
-          Тёмный фон усиливает свечение золотой мандалы — контраст проявленного
-          и непроявленного.
-        </p>
-        <p class="painting-desc" style="color:var(--accent);">
-          <strong>Доступна под заказ</strong> — создам похожую работу под ваш запрос (размер, цвет и настроение обсудим).
-        </p>
-        <a href="#contacts" class="btn btn-primary" style="margin-top:8px; width:fit-content;">Заказать похожую</a>
-      </div>
-    </div>
-
+  <div style="margin-top: 36px;">
+    <a href="/#paintings" class="btn btn-primary">Открыть каталог</a>
   </div>
 </section>
 
 <div class="line"></div>
 
-<!-- ── About ───────────────────────────────────────────────────────── -->
-<!-- ── Авторы ─────────────────────────────────────────────────────── -->
-<section id="authors">
-  <div class="section-label">Авторы</div>
-  <h2 class="section-title">Кто здесь</h2>
-  <p class="section-desc">Пока в проекте один автор. Дальше их будет больше.</p>
-
-  <div class="authors-grid">
-    <a href="/alfia/" class="author-card">
-      <div class="author-photo"><img src="images/alfia.jpg" alt="Альфия — художник" /></div>
-      <div class="author-body">
-        <h3>Альфия</h3>
-        <p class="author-role">Живопись, сакральная геометрия · Уфа</p>
-        <p>Пишет по ощущению, а не по плану. Рельефные работы: Феникс, Древо Жизни, Шри-янтра, абстракции.</p>
-        <span class="author-link">Смотреть страницу автора →</span>
-      </div>
-    </a>
-
-    <div class="author-card author-card-empty">
-      <div class="author-body">
-        <div class="author-plus">+</div>
-        <h3>Здесь может быть ваше имя</h3>
-        <p>Если вы создаёте живое, осмысленное искусство — напишите. Проект в самом начале, и войти сейчас проще всего.</p>
-        <a href="#artists" class="author-link">Как присоединиться →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="line"></div>
-
-<!-- ── Художникам ──────────────────────────────────────────────────── -->
-<section id="artists" style="background: var(--bg-card);">
-  <div style="max-width: 720px; margin: 0 auto; text-align: center;">
-    <div class="section-label">Художникам</div>
-    <h2 class="section-title">Хотите разместить свои работы?</h2>
-    <p class="section-desc" style="max-width: 640px; margin: 0 auto 26px;">
-      Reason Art собирается как пространство для авторов живого, осмысленного, сакрального искусства —
-      того, что редко берут галереи и что теряется в общих маркетплейсах.
+<!-- Акутоника -->
+<section id="akutonika">
+  <div style="max-width: 720px;">
+    <div class="section-label">Ещё я делаю</div>
+    <h2 class="section-title">Акутоника</h2>
+    <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 18px;">
+      Индивидуальные сеансы звуковой терапии планетарными камертонами.
+      Камертон на акупунктурную точку создаёт вибрацию, которая идёт вглубь —
+      мягко и при этом ощутимо.
     </p>
-    <div style="max-width: 640px; margin: 0 auto 34px; text-align: left; display: grid; gap: 14px;">
-      <p style="color: var(--light); font-size: 1rem; line-height: 1.7;">
-        <strong style="color: var(--accent);">Сейчас — бесплатно.</strong> Проект в самом начале, размещение ничего не стоит и ни к чему не обязывает.
-      </p>
-      <p style="color: var(--light); font-size: 1rem; line-height: 1.7;">
-        <strong style="color: var(--accent);">Своя страница.</strong> У каждого автора — отдельная страница: работы, история, контакты. Покупатель пишет вам напрямую.
-      </p>
-      <p style="color: var(--light); font-size: 1rem; line-height: 1.7;">
-        <strong style="color: var(--accent);">Войти сейчас проще всего.</strong> Пока авторов мало — внимания на каждого больше, а не как в ленте из тысяч работ.
-      </p>
-    </div>
-    <p class="section-desc" style="max-width: 620px; margin: 0 auto 34px;">
-      Напишите — познакомимся, посмотрю ваши работы, обсудим.
+    <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+      Очно в Уфе, возможен выезд в Москву. Только индивидуальная работа.
     </p>
-    <div class="contacts-grid">
-      <a href="https://t.me/gedonistka80lvl" target="_blank" class="contact-btn primary-contact">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F67F2F">
-          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
-        </svg>
-        Написать в Telegram
-      </a>
-      <a href="mailto:mynameisalfiya@yandex.ru" class="contact-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F67F2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/>
-        </svg>
-        mynameisalfiya@yandex.ru
-      </a>
-    </div>
+    <p style="color: var(--accent); font-size: 1.15rem; font-weight: 600; margin-bottom: 26px;">
+      3 000–4 000 ₽ / сеанс
+    </p>
+    <a href="#contacts" class="btn btn-primary">Записаться</a>
   </div>
 </section>
 
 <div class="line"></div>
 
-<!-- ── Contacts ─────────────────────────────────────────────────────── -->
+<!-- Контакты -->
 <section id="contacts">
   <div class="contacts-inner">
     <div class="section-label">Контакты</div>
-    <h2 class="section-title">Связаться</h2>
+    <h2 class="section-title">Написать мне</h2>
     <p class="section-desc">
-      По вопросам покупки работ, участия в проекте
-      или просто поговорить — пишите.
+      По вопросам покупки картин, записи на акутонику
+      или просто поговорить — я здесь.
     </p>
 
     <div class="contacts-grid">
+
+      <a href="https://t.me/thematrixcod" target="_blank" class="channel-card">
+        <span class="channel-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#F67F2F">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
+          </svg>
+        </span>
+        <span class="channel-text">
+          <span class="channel-title">Летопись художника <span>· Telegram-канал</span></span>
+          <span class="channel-desc">Здесь я делюсь не только процессом создания картин, но и тем, что проживаю глубже — внутренними процессами и осознаниями, к которым прихожу сама. Живо и без фильтров.</span>
+          <span class="channel-cta">Подписаться, если откликается</span>
+        </span>
+      </a>
 
       <a href="https://t.me/gedonistka80lvl" target="_blank" class="contact-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="#F67F2F">
@@ -1161,21 +957,10 @@
   </div>
 </section>
 
-<!-- ── Footer ───────────────────────────────────────────────────────── -->
 <footer>
-  <p>© 2026 <span>Reason Art</span> · искусство, которое откликается</p>
+  <p>© 2026 <span>Reason Art</span> · Альфия · Уфа · искусство, которое откликается</p>
 </footer>
 
-<script>
-  function swapFeniks(t){
-    var wrap = t.closest('.gallery');
-    wrap.querySelector('.gallery-main').src = t.src;
-    wrap.querySelectorAll('.gallery-thumbs img').forEach(function(i){ i.classList.remove('active'); });
-    t.classList.add('active');
-  }
-</script>
-
-<!-- GoatCounter — приватная аналитика посещений (без cookies, без слежки) -->
 <script data-goatcounter="https://reasonart.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
